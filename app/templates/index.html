@@ -1,7 +1,22 @@
+<head>
+  <title>Plataforma de Cursos de Programação</title>
+  <link rel="stylesheet" href="{{url_for("static", filename="css/index.css")}}">
+</head>
 {% extends 'base.html' %}
 
-{% block conteudo %}
-
-<h1>Pagina inicial</h1>
-
+{% block conteudo %}  
+  <main>
+      <section id="relogio">
+          <h2>Relógio Binário</h2>
+          <div id="clock-binario"></div>
+          <h2>Relógio Digital</h2>
+          <div class="clock-container">
+              <div id="clock-digital"></div>
+          </div>
+          <h3>Explicação</h3>
+          <p>O relógio binário mostra a hora em formato binário, onde cada dígito é representado por uma sequência de 0s e 1s. Por exemplo, se a hora é 10:15:30, em binário seria:</p>
+          <p><strong>Horas:</strong> 10 em binário é 1010 <strong>Minutos:</strong> 15 em binário é 1111 <strong>Segundos:</strong> 30 em binário é 11110</p>
+      </section>
+  </main>
+    <script src="{{url_for("static", filename="scripts/index.js")}}"></script>
 {% endblock %}

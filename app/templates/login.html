@@ -1,7 +1,32 @@
-{% extends 'base.html' %}
-
-{% block conteudo %}
-
-<h1>login</h1>
+<link rel="stylesheet" href="{{url_for("static", filename="css/login.css")}}">
+{% extends 'base.html' %} {% block conteudo %}
+<div class="container-login">
+  <div class="wrapper">
+    <div class="title">Login</div>
+    <form action="#">
+      <div class="field">
+        <input type="text" required />
+        <label>Email</label>
+      </div>
+      <div class="field">
+        <input type="password" required />
+        <label>Senha</label>
+      </div>
+      <div class="content">
+        <div class="checkbox">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Lembrar-me</label>
+        </div>
+        <div class="pass-link">
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+      </div>
+      <div class="field">
+        <input type="submit" value="Login" />
+      </div>
+      <div class="signup-link">Não é membro? <a href="{{url_for('cadastrar')}}">Cadastre-se</a></div>
+    </form>
+  </div>
+</div>
 
 {% endblock %}

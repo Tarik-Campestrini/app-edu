@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for("static",
+    filename="css/base.css")}}">
+    <title>Index</title>
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="container-menu">
+        <h1>Plataforma de Cursos de Programação para Crianças</h1>
+        <nav>
+          <ul>
+            <li><a href="#variaveis">Variáveis</a></li>
+            <li><a href="#numeros-binarios">Números Binários</a></li>
+            <li>
+              <a href="#pensamento-computacional">Pensamento Computacional</a>
+            </li>
+            <li>
+              <a href="#estruturas-condicionais">Estruturas Condicionais</a>
+            </li>
+            <li><a href="#estruturas-logicas">Estruturas Lógicas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <nav>
-    <a href="/index"> Pagina inicial</a>
-    <a href="/login"> Login</a>
-    <a href="/cadastrar"> Cadastrar</a>
-  </nav>
-    {% block conteudo %}
+    {% block conteudo %} {% endblock %}
 
-    {% endblock %}
-</body>
-
-<footer>
-  <p>Todos os diretos reservados</p>
-</footer>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <p class="text-justify">Todos os direitos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
