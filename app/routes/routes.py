@@ -16,3 +16,7 @@ def login():
 @app.route("/cadastrar")
 def cadastrar():
     return render_template("cadastrar.html")
+
+@app.route("/game")
+def game():
+    return render_template("game.html")
