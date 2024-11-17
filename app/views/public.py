@@ -8,4 +8,4 @@ public = Blueprint("public", __name__, url_prefix="/")
 @public.route("/", methods=["GET"])
 def index():
   
-    return render_template("public/index.html")
+    return render_template("auth/login.html")

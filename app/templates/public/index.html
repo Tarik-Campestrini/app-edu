@@ -5,7 +5,35 @@
 <title>Plataforma de curso infantil</title>
 {% endblock %}
 
+
+
 {% block conteudo %}
-<div class="home__header-titles"><h1 class="home__header-mainTitle">Cursos<br>de <span>Tecnologia!</span></h1><p class="home__header-mainText">Mergulhe em conteúdo com a maior comunidade de tecnologia do país.</p>
-  <a class="home__header-cta" href="/planos-cursos-online">Veja os planos</a></div>
+
+<div id="carouselExampleIndicators" class="carousel slide h-2" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='img/carrossel_1.jpg') }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='img/carrossel_2.jpg') }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='img/carrossel_3.jpeg') }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 {% endblock %}
