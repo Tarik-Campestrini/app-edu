@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}   
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/relogio7s.css') }}">
+
+<title>Relógio de 7 Segmentos</title>
+{% endblock %}
+
+{% block conteudo %}
+
+<div id="clockContainer">
+  <div class="clock" id="clock"></div>
+</div>
+<script src="{{url_for('static', filename='scripts/relogio7s.js')}}"></script>
+{% endblock %}

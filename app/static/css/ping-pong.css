@@ -1,0 +1,42 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 500px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #020202;
+  transition: background-color 0.5s;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.scoreboard div {
+  margin: 0 20px;
+}
+
+#gameTime {
+  font-family: 'Digital-7', sans-serif;
+  color: #00FF00;
+  background: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#gameCanvas {
+  border: 2px solid #000; /* Adiciona uma borda preta */
+  background-color: #fff;
+  transition: border-color 0.5s;
+}
+
+
+

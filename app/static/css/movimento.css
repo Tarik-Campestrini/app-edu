@@ -1,0 +1,80 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Fundo preto */
+  color: #FFFFFF; /* Texto branco */
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #FFFFFF; /* Título branco */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+canvas {
+  border: 1px solid #FFFFFF; /* Borda branca */
+  background-color: #FFFFFF; /* Fundo branco do canvas */
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: row; /* Alinha os elementos lado a lado */
+  align-items: flex-start;
+  margin: 0 20px; /* Espaço entre o painel lateral e o canvas */
+  
+}
+
+input, button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333333; /* Fundo dos inputs e botões em cinza escuro */
+  color: #FFFFFF; /* Texto branco */
+  border: 1px solid #FFFFFF; /* Borda branca */
+}
+
+.log-box {
+  width: 200px; /* Largura dos campos de explicação e código */
+  height: 600px; /* Altura ajustada */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  border: 1px solid #FFFFFF; /* Borda branca */
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #333333; /* Fundo dos campos em cinza escuro */
+  color: #FFFFFF; /* Texto branco */
+  margin-right: 10px; /* Espaço entre os campos */
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #FFFFFF; /* Borda branca */
+  box-sizing: border-box;
+  height: 620px; /* Altura ajustada */
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #FFFFFF; /* Borda branca */
+}

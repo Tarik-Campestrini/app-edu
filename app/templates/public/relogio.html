@@ -1,9 +1,9 @@
-<head>
-  <title>Plataforma de Cursos de Programação</title>
-  <link rel="stylesheet" href="{{url_for("static", filename="css/index.css")}}">
-</head>
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% block head %}
+  <title>Plataforma de Cursos de Programação</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/relogio.css') }}">
+{% endblock %}
 {% block conteudo %}  
   <main>
       <section id="relogio">

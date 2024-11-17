@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% block head %}   
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+
+<title>Login</title>
+{% endblock %}
+
+{% block conteudo %}
+
+<div class="d-flex align-items-center mb-6 py-4 bg-body-tertiary ">
+<main class="w-100 m-auto form-container">
+  <form action="login" method="post">
+    <h1 class=" h3 fw-normal mb-4 text-center">Login</h1>
+    <div class="form-floating">
+      <input type="email" class="form-control " name="email" id="floatingInput" >
+      <label for="floatingInput">E-mail</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control mb-2" name="password" id="floatingInput" >
+      <label for="floatingInput">Senha</label>
+    </div>
+    <div class="form-check text-start my-3">
+      <input type="checkbox" class="for-check-input" id="flexCheckDefault">
+      <label class="for-check-label" for="flexCheckDefault">Lembrar -me</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2">Entrar</button>
+  </form>
+</main>
+</div>
+<script src="{{url_for('static', filename='scripts/login.js')}}"></script>
+{% endblock %}  

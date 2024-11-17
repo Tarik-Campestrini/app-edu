@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% block head %}   
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cadastrar.css') }}">
+
+<title>Cadastrar</title>
+{% endblock %}
+
+{% block conteudo %}
+
+<div class="container-login">
+  <div class="wrapper">
+    <div class="title">Cadastrar-se</div>
+    <form action="cadastrar" method="post">
+      <div class="field">
+        <input type="text" name="nome" required />
+        <label>Nome</label>
+      </div>
+      <div class="field">
+        <input type="text" name="email" required />
+        <label>Email</label>
+      </div>
+      <div class="field">
+        <input type="password" name="password" required />
+        <label>Senha</label>
+      </div>
+      <div class="field">
+        <input type="password" required />
+        <label>Confirmar Senha</label>
+      </div>
+      
+      <div class="field">
+        <input type="submit" value="Cadastrar-se" />
+      </div>
+      <div class="signup-link">Ja é membro? <a href="">Entrar</a></div>
+    </form>
+  </div>
+</div>
+<script src="{{url_for('static', filename='scripts/cadastrar.js')}}"></script>
+{% endblock %}

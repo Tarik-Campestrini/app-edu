@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+{% block head %}   
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+<title>Plataforma de curso infantil</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="home__header-titles"><h1 class="home__header-mainTitle">Cursos<br>de <span>Tecnologia!</span></h1><p class="home__header-mainText">Mergulhe em conteúdo com a maior comunidade de tecnologia do país.</p>
+  <a class="home__header-cta" href="/planos-cursos-online">Veja os planos</a></div>
+{% endblock %}

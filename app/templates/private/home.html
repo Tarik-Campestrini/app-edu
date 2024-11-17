@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block head %}
+  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+  <title>Plataforma de Cursos de Programação</title>  
+{% endblock %}
+
+ {% block conteudo %}
+
+<h1 class="text-center p4">Cursos Basico</h1>
+
+<div class="row row-cols-2 row-cols-md-4 g-4 p-2">
+  
+  <div class="col">
+    <div class="card border-success" style="max-width: 25rem; max-height: 30rem;">
+      <img src="{{ url_for('static', filename='img/algoritimo.jpg') }}" class="card-img-top " alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">Algoritimo</h5>
+        <p class="card-text ">Um curso básico de algoritmo ensina a criar uma sequência de passos lógicos para resolver problemas. Os algoritmos são usados em diversas áreas, como ciência de dados, engenharia de software, aprendizado de máquina e automação. </p>
+        <div class="d-flex justify-content-end"><button type="button"  class="btn btn-primary">Inscreva-se</button></div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card border-success" style="max-width: 25rem; max-height: 30rem;">
+      <img src="{{ url_for('static', filename='img/logica-progamacao.png') }}" class="card-img-top " alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">Logica de Progamação</h5>
+        <p class="card-text ">Um curso básico de lógica de programação ensina os conceitos e regras necessários para criar códigos que possam ser interpretados e executados por dispositivos e computadores</p>
+        <div class="d-flex justify-content-end"><button type="button"  class="btn btn-primary">Inscreva-se</button></div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card border-success" style="max-width: 25rem; max-height: 30rem;">
+      <img src="{{ url_for('static', filename='img/linguagem-progamacao.jpeg') }}" class="card-img-top " alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">Linguagem de Progamação</h5>
+        <p class="card-text ">A linguagem de programação é um sistema formal que permite a criação de programas informáticos através de um conjunto de regras, símbolos, palavras-chave e comandos.  </p>
+        <div class="d-flex justify-content-end"><button type="button"  class="btn btn-primary">Inscreva-se</button></div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card border-success" style="max-width: 25rem; max-height: 30rem;">
+      <img src="{{ url_for('static', filename='img/redes.webp') }}" class="card-img-top " alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">Redes</h5>
+        <p class="card-text ">O curso Básico de Redes é ideal para você que tem pouca ou nenhuma experiência com Redes de Computadores começar a aprender os conceitos importantes da área como Modelo OSI, TCP/IP e Dispositivos de Redes.</p>
+        <div class="d-flex justify-content-end"><button type="button"  class="btn btn-primary">Inscreva-se</button></div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+{% endblock %}

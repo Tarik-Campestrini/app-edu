@@ -1,0 +1,45 @@
+{% extends 'base.html' %} 
+{% block head %}   
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/movimento.css') }}">
+
+<title>Movimento</title>
+{% endblock %}
+
+{% block conteudo %}
+  <h1>Jogo do Movimento</h1>
+  <div class="container">
+      <div class="side-panel">
+          <div class="color-container">
+              <p><strong>Cores disponíveis:</strong></p>
+              <div class="color-item"><div class="color-box" style="background-color: #000000;"></div> Preto (#000000)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FFFFFF;"></div> Branco (#FFFFFF)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FF0000;"></div> Vermelho (#FF0000)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #00FF00;"></div> Verde (#00FF00)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #0000FF;"></div> Azul (#0000FF)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FFFF00;"></div> Amarelo (#FFFF00)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FFA500;"></div> Laranja (#FFA500)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #800080;"></div> Roxo (#800080)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #00FFFF;"></div> Ciano (#00FFFF)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FFC0CB;"></div> Rosa (#FFC0CB)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #A52A2A;"></div> Marrom (#A52A2A)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #808080;"></div> Cinza (#808080)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #008000;"></div> Verde Escuro (#008000)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #800000;"></div> Vermelho Escuro (#800000)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #808000;"></div> Oliva (#808000)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #ADD8E6;"></div> Azul Claro (#ADD8E6)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #F08080;"></div> Coral Claro (#F08080)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #FFD700;"></div> Dourado (#FFD700)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #DAA520;"></div> Dourado Escuro (#DAA520)</div>
+              <div class="color-item"><div class="color-box" style="background-color: #4B0082;"></div> Índigo (#4B0082)</div>
+          </div>
+      </div>
+      <canvas id="canvas" width="800" height="600"></canvas>
+      <div class="side-panel">
+          <div id="action-log" class="log-box"></div>
+          <div id="code-log" class="log-box"></div>
+      </div>
+  </div>
+  <input type="text" id="command" placeholder="Digite o comando">
+  <button onclick="executeCommand()">Executar</button>
+  <script src="{{url_for('static', filename='scripts/movimento.js')}}"></script>
+  {% endblock %}
