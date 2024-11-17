@@ -27,12 +27,17 @@ def cadatrar():
       elif not password:
         error = "Digite um nome e-mail!"
         db.session.closed()
-        
-      e_mail = usuario.query.filter_by(email = email).first()  
+      
+      try:
+        e_mail = usuario.query.filter_by(email = email).first()
+      except Exception:   
+        return render_template("auth/cadastrar.html")
+      print(f"esse e o erro  {e_mail} {error}")
       if e_mail == None:
         
         db.session.add(usuario) 
         db.session.commit() 
+        return render_template("auth/login.html")
       else:
         error = f"O e-mail {email} ja esta cadastrado!" 
         db.session.close() 
@@ -49,8 +54,10 @@ def login():
       password = request.form.get("password") 
       
       error = None      
-    
-      usuario = Usuario.query.filter_by(email = email).first()  
+      try:        
+        usuario = Usuario.query.filter_by(email = email).first()  
+      except Exception:   
+        return render_template("auth/login.html")  
      
       if usuario == None:
         error = "Usuário não cadastrado"    
