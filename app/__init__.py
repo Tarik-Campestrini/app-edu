@@ -6,8 +6,7 @@ app = Flask(__name__)
 app.config.from_object("config.ProductionConfig")
 db = SQLAlchemy(app)
 
-app.app_context().push()
-db.create_all()
+
 
 #Importar Vistas
 from app.views.auth import auth
