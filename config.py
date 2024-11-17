@@ -11,7 +11,7 @@ class Config():
   #SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@localhost:3306/app-edu"
 class ProductionConfig(Config):
   DEBUG = False
-  
+  SECRET_KEY = "SECRET_KEY" 
 class DevelopmentConfig(Config):
   SECRET_KEY = "SECRET_KEY"  
   DEBUG =True
