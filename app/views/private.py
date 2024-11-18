@@ -17,3 +17,9 @@ def get_user(id):
 def home():
   
     return render_template("private/home.html", user = g.user)  
+
+@private.route("/meus_cursos", methods=["GET"])
+@login_required
+def meus_cursos():
+  
+    return render_template("private/meus_cursos.html", user = g.user)  

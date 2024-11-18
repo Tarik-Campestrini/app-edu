@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+  <title>Meus Cursos</title>  
+{% endblock %}
+
+{% block conteudo %}
+<h1 class="text-center p4">Meus Cursos</h1>
+
+<div class=" justify-content-center row-cols-1 row-cols-md-1 g-1 p-2">
+  
+  <div class="col">
+    <div class="card border-success" style="max-width: 25rem; max-height: 30rem;">
+      <img src="{{ url_for('static', filename='img/algoritimo.jpg') }}" class="card-img-top " alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">Algoritimo</h5>
+        <p class="card-text ">Um curso básico de algoritmo ensina a criar uma sequência de passos lógicos para resolver problemas. Os algoritmos são usados em diversas áreas, como ciência de dados, engenharia de software, aprendizado de máquina e automação. </p>
+        <div class="d-flex justify-content-end"><button type="button"  class="btn btn-primary">iniciar</button></div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}
